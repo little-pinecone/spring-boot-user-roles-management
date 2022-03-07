@@ -15,6 +15,7 @@
 	<description>Demo Spring Boot app showing type-safe user roles</description>
 	<properties>
 		<java.version>17</java.version>
+		<springdoc.version>1.6.6</springdoc.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -27,6 +28,24 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- Docs -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>${springdoc.version}</version>
+		</dependency>
+		<!-- END of Docs -->
+
+		<!-- Utilities -->
+		<!-- Dependency for removing IntelliJ warning -->
+		<!-- https://youtrack.jetbrains.com/issue/IDEA-225445 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!-- END of Utilities -->
 	</dependencies>
 
 	<build>

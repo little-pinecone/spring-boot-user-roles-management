@@ -35,3 +35,13 @@ You can run tests with:
 ```shell
 mvn test
 ```
+
+### API documentation
+
+#### Swagger UI
+
+Swagger UI is available at [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+
+#### OpenAPI
+
+[http://localhost:8080/v3/api-docs](http://localhost:8080/v3/api-docs)
