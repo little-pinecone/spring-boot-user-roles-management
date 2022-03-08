@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -29,15 +30,25 @@ class ExampleControllerTest {
     }
 
     @Test
+    @WithMockUser
     void shouldCallGetEndpoint() throws Exception {
         mvc.perform(get(PATH).contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
     }
 
     @Test
+    @WithMockUser(roles = "CHIEF_OPERATING_OFFICER")
     void shouldCallPostEndpoint() throws Exception {
         mvc.perform(post(PATH).contentType(MediaType.APPLICATION_JSON)
                         .with(csrf()))
                 .andExpect(status().isOk());
+    }
+
+    @Test
+    @WithMockUser
+    void shouldDenyAccessToPostEndpoint() throws Exception {
+        mvc.perform(post(PATH)
+                        .with(csrf()))
+                .andExpect(status().isForbidden());
     }
 }
