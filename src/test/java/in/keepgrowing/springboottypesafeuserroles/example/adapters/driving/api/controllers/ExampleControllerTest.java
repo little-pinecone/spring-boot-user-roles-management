@@ -1,5 +1,6 @@
 package in.keepgrowing.springboottypesafeuserroles.example.adapters.driving.api.controllers;
 
+import in.keepgrowing.springboottypesafeuserroles.testing.annotations.WithMockChiefOperationOfficer;
 import in.keepgrowing.springboottypesafeuserroles.testing.config.ControllerIntegrationTestConfig;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +41,7 @@ class ExampleControllerTest {
     }
 
     @Test
-    @WithMockUser(roles = "CHIEF_OPERATING_OFFICER")
+    @WithMockChiefOperationOfficer
     void shouldCallPostEndpoint() throws Exception {
         mvc.perform(post(PATH).contentType(MediaType.APPLICATION_JSON)
                         .with(csrf()))
