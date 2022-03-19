@@ -4,7 +4,7 @@
 
 ## About this project
 
-This project shows an example implementation of type-sage user roles for Spring Security
+A demo Spring Boot application showing useful tips for managing user roles.
 
 ## Prerequisites
 
