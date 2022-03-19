@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>in.keepgrowing</groupId>
-	<artifactId>spring-boot-type-safe-user-roles</artifactId>
+	<artifactId>spring-boot-user-roles-management</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-type-safe-user-roles</name>
-	<description>Demo Spring Boot app showing type-safe user roles</description>
+	<name>spring-boot-user-roles-management</name>
+	<description>Demo Spring Boot app showing useful tips for managing user roles</description>
 	<properties>
 		<java.version>17</java.version>
 		<springdoc.version>1.6.6</springdoc.version>
