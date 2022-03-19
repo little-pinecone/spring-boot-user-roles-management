@@ -1,4 +1,4 @@
-# spring-boot-type-safe-user-roles
+# spring-boot-user-roles-management
 
 [![keep_growing logo](readme-images/logo_250x60.png)](https://keepgrowing.in/)
 
